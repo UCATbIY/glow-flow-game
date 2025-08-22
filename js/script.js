@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
     title.appendChild(span);
   });
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/service-worker.js");
+    navigator.serviceWorker.register("/js/service-worker.js");
   }
   if (isMobile && !isStandalone) {
     document.documentElement.style.overflow = "hidden";
@@ -92,3 +92,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
