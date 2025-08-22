@@ -15,12 +15,37 @@ window.addEventListener("load", () => {
     title.appendChild(span);
   });
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/js/service-worker.js");
+    navigator.serviceWorker
+      .register("/service-worker.js", { scope: "/" })
+      .then((registration) => {
+        console.log("SW registered with scope:", registration.scope);
+
+        if (navigator.serviceWorker.controller) {
+          console.log("Service Worker is controlling the page");
+        } else {
+          console.log("Service Worker not controlling the page yet");
+          registration.addEventListener("updatefound", () => {
+            const newWorker = registration.installing;
+            newWorker.addEventListener("statechange", () => {
+              if (newWorker.state === "activated") {
+                console.log("New Service Worker activated, reloading...");
+                window.location.reload();
+              }
+            });
+          });
+        }
+      })
+      .catch((registrationError) => {
+        console.log("SW registration failed:", registrationError);
+      });
   }
+  const isStandalone = window.matchMedia("(display-mode: standalone)").matches;
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
   if (isMobile && !isStandalone) {
-    document.documentElement.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
-    document.body.style.touchAction = "none";
+    shouldInstallPrompt();
   }
 });
 document.addEventListener("DOMContentLoaded", function () {
@@ -92,4 +117,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-

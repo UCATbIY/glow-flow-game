@@ -158,30 +158,33 @@ h1 span {
   content: "";
 }
 #license-modal {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.9);
   z-index: 1000;
-  overflow-y: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 #license-modal.modal-visible {
+  display: flex;
   opacity: 1;
 }
 .modal-content {
   background: rgba(25, 21, 58, 0.95);
-  padding: 30px;
   border: 3px solid var(--cyan-color);
   border-radius: 20px;
-  box-shadow: 0 0 10px var(--cyan-color);
-  max-width: 90%;
-  max-height: 90%;
+  box-shadow: 0 0 30px var(--cyan-color);
+  padding: 30px;
+  max-width: 90vw;
+  max-height: 90vh;
   overflow-y: auto;
+  margin: 20px;
 }
 .modal-title {
   color: var(--cyan-color);
@@ -211,6 +214,7 @@ h1 span {
 
 .license-text strong {
   color: var(--cyan-color);
+  text-align: center;
   display: block;
   margin-bottom: 10px;
   font-size: 1.1rem;
@@ -267,35 +271,26 @@ h1 span {
 }
 @media (max-width: 768px) {
   .modal-content {
-    margin: 10%;
-    padding: 20px;
-  }
-  .modal-title {
-    font-size: 1.5rem;
-  }
-  .license-text {
-    height: 250px;
-    padding: 15px;
-    font-size: 0.9rem;
-  }
-  .license-text li {
-    margin-bottom: 8px;
+    width: calc(100% - 40px);
+    max-width: none;
   }
 }
-@media (max-width: 480px) {
+@media (min-width: 769px) {
   .modal-content {
-    margin: 5%;
-    padding: 15px;
+    width: 700px;
+    max-width: calc(100% - 40px);
   }
-  .modal-title {
-    font-size: 1.3rem;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
   }
-  .license-text {
-    height: 200px;
+  25% {
+    transform: translateX(-10px);
   }
-  #license-confirm {
-    padding: 12px;
-    font-size: 1rem;
+  75% {
+    transform: translateX(10px);
   }
 }
 @media (hover: hover) and (pointer: fine) {
