@@ -1,4 +1,4 @@
-const CACHE_NAME = "GlowFlow-v1";
+const CACHE_NAME = "Glow-Flow-v1";
 const OFFLINE_URL = [
   "./html/offline.html",
   "./css/offline.css",
@@ -10,21 +10,17 @@ const ASSETS_TO_CACHE = [
   "./html/game.html",
   "./html/settings.html",
   "./html/statistics.html",
-  "./html/offline.html",
   "./css/variables.css",
   "./css/style.css",
   "./css/game.css",
   "./css/settings.css",
   "./css/statistics.css",
-  "./css/offline.css",
   "./js/matter.min.js",
-  "/js/vibration.js",
-  "./js/metrika.js",
+  "./js/vibration.js",
   "./js/script.js",
   "./js/game.js",
   "./js/settings.js",
   "./js/statistics.js",
-  "./js/offline.js",
   "./icons/favicon.png",
   "./icons/icon-192x192.png",
   "./icons/icon-512x512.png",
@@ -83,3 +79,4 @@ self.addEventListener("message", (event) => {
     self.skipWaiting();
   }
 });
+
