@@ -128,7 +128,7 @@ let canSpawnNewPiece = true;
 let scoreAnimationFrame;
 let pieceInterval;
 let checkLinesInterval;
-let baseArea = 111500;
+let baseArea = 1500;
 let unlockedColors = 4;
 let isCheckingLines = false;
 let bestScore = parseInt(localStorage.getItem("bestScore")) || 0;
