@@ -41,17 +41,16 @@ window.addEventListener("load", () => {
   }
 });
 document.addEventListener("DOMContentLoaded", function () {
-  const licenseModal = document.getElementById("license-modal");
+  const modalContent = document.getElementById("license-modal");
   const agreeCheckbox = document.getElementById("license-agree");
   const confirmBtn = document.getElementById("license-confirm");
   if (!localStorage.getItem("license-accepted")) {
     setTimeout(function () {
-      licenseModal.style.display = "block";
-      document.body.style.overflow = "hidden";
-      licenseModal.style.opacity = "0";
-      licenseModal.style.transition = "opacity 0.5s ease";
+      modalContent.style.display = "flex";
+      modalContent.style.opacity = "0";
+      modalContent.style.transition = "opacity 0.5s ease";
       setTimeout(() => {
-        licenseModal.style.opacity = "1";
+        modalContent.style.opacity = "1";
       }, 100);
     }, 1000);
   }
@@ -72,9 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   confirmBtn.addEventListener("click", function () {
     if (agreeCheckbox.checked) {
-      licenseModal.style.opacity = "0";
+      modalContent.style.opacity = "0";
       setTimeout(function () {
-        licenseModal.style.display = "none";
+        modalContent.style.display = "none";
         document.body.style.overflow = "auto";
       }, 500);
       localStorage.setItem("license-accepted", "true");
@@ -83,15 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
           VibrationManager.vibrate(VibrationManager.patterns.button);
         }
       });
-    }
-  });
-  licenseModal.addEventListener("click", function (e) {
-    if (e.target === licenseModal) {
-      licenseModal.style.opacity = "0";
-      setTimeout(function () {
-        licenseModal.style.display = "none";
-        document.body.style.overflow = "auto";
-      }, 500);
     }
   });
 });
@@ -109,4 +99,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-

@@ -1,5 +1,4 @@
 "use strict";
-// Uses Matter.js (https://brm.io/matter-js/)
 if (
   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
     navigator.userAgent

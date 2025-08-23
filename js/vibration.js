@@ -98,9 +98,6 @@ window.ensureVibrationManager = function (callback) {
     script.onload = function () {
       if (callback) setTimeout(callback, 100);
     };
-    script.onerror = function (error) {
-      if (callback) callback();
-    };
     document.head.appendChild(script);
   } catch (error) {
     if (callback) callback();

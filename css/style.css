@@ -157,7 +157,7 @@ h1 span {
   animation: btn-shine 3s infinite;
   content: "";
 }
-#license-modal {
+.license-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -169,9 +169,9 @@ h1 span {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  max-width: none;
 }
-#license-modal.modal-visible {
+.license-modal.modal-visible {
   display: flex;
   opacity: 1;
 }
@@ -233,7 +233,7 @@ h1 span {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 8px;
 }
-#license-agree {
+.license-agree {
   margin-right: 12px;
   width: 20px;
   height: 20px;
@@ -244,7 +244,7 @@ h1 span {
   font-size: 1rem;
   cursor: pointer;
 }
-#license-confirm {
+.license-confirm {
   width: 100%;
   padding: 15px;
   border: none;
@@ -255,30 +255,28 @@ h1 span {
   font-size: 1.1rem;
   font-weight: bold;
 }
-#license-confirm:disabled {
-  background: #555 !important;
-  color: #999 !important;
+.license-confirm:disabled {
+  background: 0.555 !important;
+  color: 0.999 !important;
   cursor: not-allowed;
   box-shadow: none !important;
 }
-#license-confirm:enabled {
+.license-confirm:enabled {
   background: var(--cyan-color);
   color: black;
 }
-#license-confirm:enabled:hover {
+.license-confirm:enabled:hover {
   background: var(--magenta-color);
   transform: scale(1.05);
 }
 @media (max-width: 768px) {
   .modal-content {
     width: calc(100% - 40px);
-    max-width: none;
   }
 }
 @media (min-width: 769px) {
   .modal-content {
     width: 700px;
-    max-width: calc(100% - 40px);
   }
 }
 @keyframes shake {

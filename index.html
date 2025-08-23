@@ -84,7 +84,7 @@
       http-equiv="Content-Security-Policy"
       content="
   default-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://mc.yandex.ru https://mc.yandex.com;
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://mc.yandex.ru https://mc.yandex.com;
   style-src 'self' 'unsafe-inline';
   img-src 'self' data: https://mc.yandex.ru https://mc.yandex.com;
   connect-src 'self' https://mc.yandex.ru https://mc.yandex.com;
@@ -111,7 +111,7 @@
   </head>
   <body>
     <div class="menu-container" id="menu-container">
-      <h1 id="title"></h1>
+      <h1 class="title" id="title"></h1>
       <div class="btn-container">
         <a href="./html/game.html" class="btn btn-play" id="play-btn"> PLAY </a>
         <a
@@ -142,8 +142,8 @@
     <div class="copyright">
       © 2025 Daniil Usatenko &#47; Glow Flow. All rights reserved.
     </div>
-    <div id="license-modal">
-      <div class="modal-content">
+    <div id="license-modal" class="license-modal">
+      <div id="modal-content" class="modal-content">
         <h2 class="modal-title">END USER LICENSE AGREEMENT</h2>
         <div class="license-text">
           <strong>Glow Flow Game License Agreement</strong>
@@ -171,12 +171,14 @@
           <p class="license-date">Last updated: August 2025</p>
         </div>
         <div class="license-agree-container">
-          <input type="checkbox" id="license-agree" />
+          <input type="checkbox" id="license-agree" class="license-agree" />
           <label for="license-agree" class="license-agree-label"
             >I have read and agree to the terms</label
           >
         </div>
-        <button id="license-confirm" disabled>CONFIRM</button>
+        <button class="license-confirm" id="license-confirm" disabled>
+          CONFIRM
+        </button>
       </div>
     </div>
     <script src="./js/vibration.js" defer></script>
