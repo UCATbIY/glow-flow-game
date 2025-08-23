@@ -39,14 +39,6 @@ window.addEventListener("load", () => {
         console.log("SW registration failed:", registrationError);
       });
   }
-  const isStandalone = window.matchMedia("(display-mode: standalone)").matches;
-  const isMobile =
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    );
-  if (isMobile && !isStandalone) {
-    shouldInstallPrompt();
-  }
 });
 document.addEventListener("DOMContentLoaded", function () {
   const licenseModal = document.getElementById("license-modal");
@@ -117,3 +109,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
