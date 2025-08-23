@@ -128,7 +128,7 @@ let canSpawnNewPiece = true;
 let scoreAnimationFrame;
 let pieceInterval;
 let checkLinesInterval;
-let baseArea = 1500;
+let baseArea = 111500;
 let unlockedColors = 4;
 let isCheckingLines = false;
 let bestScore = parseInt(localStorage.getItem("bestScore")) || 0;
@@ -741,6 +741,8 @@ function restartGame() {
   clearInterval(autoSaveInterval);
   if (runner) Runner.stop(runner);
   runner = Runner.create();
+  gameOverDisplay.style.display = "none";
+  restartBtn.style.display = "none";
   fallenPiecesCount = 0;
   gameStartTime = Date.now();
   currentCombo = 0;
@@ -763,7 +765,6 @@ function restartGame() {
   currentPiece = null;
   canSpawnNewPiece = true;
   initColors();
-  let unlockedColors = 4;
   clearInterval(pieceInterval);
   clearInterval(checkLinesInterval);
   pieceInterval = setInterval(() => {
@@ -887,7 +888,7 @@ function checkColorUnlocks() {
     ) {
       if (unlockedColors !== i + 5) {
         unlockedColors = i + 5;
-        initColors();
+
         updateColorsProgress();
         const centerX = gameWidth / 2;
         const centerY = gameHeight * 0.3;
