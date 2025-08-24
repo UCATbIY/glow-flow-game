@@ -76,7 +76,7 @@ h1 span {
   background: rgba(234, 0, 255, var(--btn-base-opacity));
   box-shadow: 0 0 15px var(--magenta-color);
   animation: btn-appear 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  animation-delay: 1.8s;
+  animation-delay: 2.4s;
   border-color: var(--magenta-color);
   text-shadow: 0 0 5px var(--magenta-color);
 }
@@ -85,7 +85,7 @@ h1 span {
   background: rgba(0, 255, 255, var(--btn-base-opacity));
   box-shadow: 0 0 15px var(--cyan-color);
   animation: btn-appear 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  animation-delay: 2s;
+  animation-delay: 2.7s;
   border-color: var(--cyan-color);
   text-shadow: 0 0 5px var(--cyan-color);
 }
@@ -94,7 +94,7 @@ h1 span {
   background: rgba(255, 165, 0, var(--btn-base-opacity));
   box-shadow: 0 0 15px var(--orange-color);
   animation: btn-appear 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  animation-delay: 2.2s;
+  animation-delay: 3s;
   border-color: var(--orange-color);
   text-shadow: 0 0 5px var(--orange-color);
 }
@@ -386,4 +386,5 @@ h1 span {
     font-size: 0.6rem;
   }
 }
+
 
