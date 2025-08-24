@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
   "GLOW FLOW".split("").forEach((letter, i) => {
     const span = document.createElement("span");
     span.textContent = letter === " " ? "" : letter;
-    span.style.animationDelay = `${i * 0.1}s`;
+    span.style.animationDelay = `${i * 0.2}s`;
     title.appendChild(span);
   });
   if ("serviceWorker" in navigator) {
@@ -99,3 +99,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
