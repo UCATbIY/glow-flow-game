@@ -198,6 +198,9 @@ window.updateGameSettings = function () {
   } else if (!isPaused && gameActive) {
     bgMusic.play().catch((e) => console.log("Music play prevented:", e));
   }
+  // if (settings.musicEnabled === 1) {
+  //   bgMusic.play().catch((e) => console.log("Audio autoplay blocked:", e));
+  // }
 };
 function applyGlowEffect(color) {
   return {
@@ -888,7 +891,7 @@ function checkColorUnlocks() {
     ) {
       if (unlockedColors !== i + 5) {
         unlockedColors = i + 5;
-
+        initColors();
         updateColorsProgress();
         const centerX = gameWidth / 2;
         const centerY = gameHeight * 0.3;
