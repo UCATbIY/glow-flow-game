@@ -206,9 +206,7 @@ function applyGlowEffect(color) {
   return {
     fillStyle: color,
     strokeStyle: "#FFFFFF",
-    lineWidth: 2 + Math.floor(3),
-    shadowColor: color,
-    shadowBlur: 15 + Math.floor(25),
+    lineWidth: 5 + Math.floor(0),
     shadowOffset: { x: 0, y: 0 },
   };
 }

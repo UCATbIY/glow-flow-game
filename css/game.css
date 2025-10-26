@@ -18,7 +18,7 @@ body {
   overflow: hidden;
   font-family: var(--font-family);
   font-display: swap;
-  background: url("../icons/image.png");
+  background: url("../image/bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -28,13 +28,12 @@ body {
 .game-wrapper {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   max-width: 500px;
   margin: 10px;
   overflow: hidden;
   border: 4px solid var(--light-color);
   border-radius: 10px;
-  box-shadow: 0 0 20px var(--light-color), inset 0 0 20px var(--light-color);
 }
 .game-container {
   position: relative;
@@ -250,9 +249,9 @@ body {
   fill: var(--cyan-color);
   cursor: pointer;
 }
-#game-container canvas {
+/* #game-container canvas {
   filter: drop-shadow(0 0 10px white);
-}
+} */
 @media (hover: hover) and (pointer: fine) {
   .neon-back-button:hover {
     background: rgba(255, 0, 255, 0.3);

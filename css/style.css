@@ -18,7 +18,9 @@ body {
   padding: 0;
   font-family: var(--font-family);
   font-display: swap;
-  background: url("../icons/image.png");
+  background: 
+  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  url("../image/bg.png") center/cover no-repeat;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -27,7 +29,7 @@ body {
 .menu-container {
   position: absolute;
   z-index: 10;
-  top: 50%;
+  top: 40%;
   left: 50%;
   width: 100%;
   padding: 20px;
@@ -70,6 +72,7 @@ h1 span {
   transform: translateY(200px) scale(0.8);
   transition: all 0.3s ease;
   cursor: pointer;
+  text-shadow: 0 0 20px black;
 }
 .btn-play {
   color: var(--magenta-color);
@@ -78,7 +81,6 @@ h1 span {
   animation: btn-appear 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   animation-delay: 2.4s;
   border-color: var(--magenta-color);
-  text-shadow: 0 0 5px var(--magenta-color);
 }
 .btn-statistics {
   color: var(--cyan-color);
@@ -87,7 +89,6 @@ h1 span {
   animation: btn-appear 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   animation-delay: 2.7s;
   border-color: var(--cyan-color);
-  text-shadow: 0 0 5px var(--cyan-color);
 }
 .btn-settings {
   color: var(--orange-color);
@@ -96,7 +97,6 @@ h1 span {
   animation: btn-appear 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   animation-delay: 3s;
   border-color: var(--orange-color);
-  text-shadow: 0 0 5px var(--orange-color);
 }
 .telegram-icon {
   position: fixed;
@@ -108,7 +108,7 @@ h1 span {
   background-color: var(--light-color);
   border-radius: 50%;
   box-shadow: 0 0 15px var(--cyan-color);
-  opacity: 0.7;
+  opacity: 0.8;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -211,7 +211,6 @@ h1 span {
   margin-bottom: 10px;
   padding-left: 5px;
 }
-
 .license-text strong {
   color: var(--cyan-color);
   text-align: center;
@@ -342,10 +341,10 @@ h1 span {
 }
 @keyframes btn-shine {
   from {
-    transform: rotate(30deg) translate(-30%, -30%);
+    transform: rotate(45deg) translate(-45%, -45%);
   }
   to {
-    transform: rotate(30deg) translate(30%, 30%);
+    transform: rotate(45deg) translate(45%, 45%);
   }
 }
 @keyframes fade-in {
@@ -386,5 +385,3 @@ h1 span {
     font-size: 0.6rem;
   }
 }
-
-

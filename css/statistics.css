@@ -18,7 +18,7 @@ body {
   font-display: swap;
   text-align: center;
   color: var(--orange-color);
-  background: url("../icons/image.png");
+  background: url("../image/bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

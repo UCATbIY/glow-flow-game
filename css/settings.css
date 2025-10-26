@@ -16,7 +16,7 @@ body {
   margin: 0;
   font-family: var(--font-family);
   font-display: swap;
-  background: url("../icons/image.png");
+  background: url("../image/bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
