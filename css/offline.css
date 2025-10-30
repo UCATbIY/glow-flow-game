@@ -28,7 +28,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  touch-action: manipulation;
   box-shadow: 0 0 15px var(--cyan-color);
 }
 h1 {
