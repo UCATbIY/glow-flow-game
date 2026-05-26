@@ -1,0 +1,24 @@
+{
+  "name": "Glow Flow",
+  "short_name": "Glow Flow",
+  "start_url": "index.html",
+  "lang": "en-EN",
+  "display": "fullscreen",
+  "display_override": ["fullscreen"],
+  "orientation": "portrait",
+  "prefer_related_applications": false,
+  "description": "Exciting arcade physics game with colorful geometric figures",
+  "categories": ["game", "arcade", "puzzle"],
+  "icons": [
+    {
+      "src": "image/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "image/logo.png",
+      "sizes": "1080x1080",
+      "type": "image/png"
+    }
+  ]
+}
